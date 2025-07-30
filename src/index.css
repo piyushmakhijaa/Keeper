@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+  
+}
+
+html {
+  font-family: "Playwrite PL", cursive;
+  scroll-behavior: smooth;
+  
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #f7f9fb;
+  padding: 0 16px;
+  color: #2e2e2e;
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
+}
+.main-content {
+  flex: 1;
+}
+/* Header */
+header {
+  background: linear-gradient(to right, #ffb347, #ffcc33);
+  margin: auto -16px;
+  padding: 20px 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+ font-family: "Bitcount", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  color: #f7f9fb;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
+}
+
+/* Footer */
+footer {
+
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+   font-family: "Bitcount", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  color: #f7f9fb;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
+ 
+}
+
+footer p {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Note Card */
+.note {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 16px 20px;
+  width: 260px;
+  margin: 20px;
+  float: left;
+  transform: scale(1);
+   font-family: "Tagesschrift", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  
+}
+
+.note:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.note h1 {
+  font-size: 1.3em;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 600;
+}
+
+.note p {
+  font-size: 1.05em;
+  margin-bottom: 12px;
+  color: #555;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+   
+}
+
+.note button {
+  position: relative;
+  float: right;
+  margin-right: 10px;
+  color: #ffa500;
+  border: none;
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.note button:hover {
+  transform: rotate(90deg) scale(1.2);
+  color: #cc8500;
+}
+
+/* Form */
+form {
+  position: relative;
+  width: 500px;
+  margin: 40px auto 30px auto;
+  background: #ffffff;
+  padding: 20px 20px 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+form:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+form input,
+form textarea {
+  width: 100%;
+  border: none;
+  padding: 6px 8px;
+  outline: none;
+  font-size: 1.1em;
+  font-family: inherit;
+  resize: none;
+  background: transparent;
+  border-bottom: 2px solid transparent;
+  margin-bottom: 10px;
+   font-family: "Tagesschrift", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+form input:focus,
+form textarea:focus {
+  border-bottom: 2px solid #ffb347;
+}
+
+form .fab {
+  position: absolute;
+  right: 20px;
+  bottom: -18px;
+  background: #ffa500;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  outline: none;
+}
+
+form .fab:hover {
+  background: #cc8500;
+  transform: scale(1.1);
+}
+
+
+
+
+/* Set full height for html & body */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Flex column layout */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Space between header/content/footer */
+.note-container {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: flex-start;
+}
+
+/* Optional: style individual note */
+.note {
+  /* Don't use float! */
+  width: 250px;
+}
